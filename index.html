@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChinaTextbookStudyFree · 教材学习导航</title>
-  <meta name="description" content="中小学到大学教材学习资源导航索引，链接至公开开源仓库与国家中小学智慧教育平台。">
+  <title>ChinaTextbookStudyFree · 教材与习题导航</title>
+  <meta name="description" content="面向手机的教材电子课本与同步习题导航，优先国内可直连的官方公开来源。">
   <style>
     :root{
       --bg:#f5f7fa; --card:#ffffff; --ink:#1f2933; --sub:#616e7c;
       --line:#e4e7eb; --brand:#2563eb; --brand-soft:#e8f0fe;
-      --radius:16px;
+      --green:#1a7f4b; --amber:#8a4b00; --radius:16px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
     body{
@@ -18,89 +18,95 @@
       -webkit-text-size-adjust:100%;
     }
     .wrap{max-width:920px;margin:0 auto;padding:24px 18px 48px}
-    header.hero{padding:28px 0 18px}
+    header.hero{padding:24px 0 16px}
     .hero .tag{display:inline-block;font-size:13px;color:var(--brand);background:var(--brand-soft);
       padding:4px 12px;border-radius:999px;margin-bottom:12px}
-    .hero h1{font-size:26px;letter-spacing:.5px}
+    .hero h1{font-size:25px;letter-spacing:.5px}
     .hero p{color:var(--sub);margin-top:8px;font-size:15px}
     .notice{
       margin-top:16px;background:#fff8ec;border:1px solid #fde9c8;border-radius:var(--radius);
-      padding:14px 16px;font-size:14px;color:#7a5310;
+      padding:14px 16px;font-size:14px;color:var(--amber);
     }
-    .notice strong{color:#8a4b00}
-    h2{font-size:18px;margin:30px 0 14px}
+    h2{font-size:18px;margin:28px 0 14px;display:flex;align-items:center;gap:8px}
+    h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--brand)}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
     a.card{
       display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-      padding:18px 18px 16px;text-decoration:none;color:var(--ink);transition:.15s;
+      padding:18px;text-decoration:none;color:var(--ink);transition:.15s;
     }
     a.card:active,a.card:hover{border-color:var(--brand);box-shadow:0 6px 18px rgba(37,99,235,.10);transform:translateY(-2px)}
     a.card .stage{font-size:17px;font-weight:600}
     a.card .desc{color:var(--sub);font-size:13px;margin-top:6px}
+    a.card .meta{margin-top:10px;display:inline-block;font-size:12px;color:var(--green);background:#eaf6ef;padding:3px 10px;border-radius:999px}
+    a.card .meta.warn{color:var(--amber);background:#fff3e0}
     a.card .arrow{margin-top:10px;color:var(--brand);font-size:13px}
-    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
-    .links a{
-      font-size:14px;color:var(--brand);background:var(--card);border:1px solid var(--line);
-      padding:10px 14px;border-radius:12px;text-decoration:none;
-    }
+    .note{font-size:13px;color:var(--sub);margin-top:10px}
     footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);color:var(--sub);font-size:13px}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header class="hero">
-      <span class="tag">免费教材学习导航</span>
+      <span class="tag">手机端 · 国内直连优先</span>
       <h1>ChinaTextbookStudyFree</h1>
-      <p>面向小学、初中、高中到大学的教材学习资源索引，按学段快速跳转到公开来源。</p>
+      <p>中小学到大学的电子课本与同步习题导航，优先整理可在国内网络直接打开的官方公开来源。</p>
       <div class="notice">
-        <strong>说明：</strong>本站仅为导航索引，<strong>不存储、不上传、不分发任何教材 PDF 副本</strong>。下方链接指向公开开源仓库
-        <em>TapXWorld/ChinaTextbook</em> 及国家中小学智慧教育平台。教材版权归原出版方所有，资源请仅限个人学习使用。
+        <strong>说明：</strong>本站仅为导航索引，<strong>不存储、不上传任何教材或习题文件副本</strong>。教材与习题版权归原出版方所有，请仅限个人学习使用；部分第三方平台资源需登录，个别内容可能收费，以平台页面为准。
       </div>
     </header>
 
-    <h2>按学段浏览</h2>
+    <h2><span class="dot"></span>一、看教材（电子课本）</h2>
     <div class="grid">
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E5%B0%8F%E5%AD%A6">
-        <div class="stage">小学</div>
-        <div class="desc">六三学制小学各学科教材目录</div>
-        <div class="arrow">进入目录 →</div>
+      <a class="card" href="https://basic.smartedu.cn/elecEdu">
+        <div class="stage">国家中小学智慧教育平台 · 电子教材</div>
+        <div class="desc">小学、初中、高中全学科、多版本、分年级分册的官方电子课本，按学段 / 学科 / 版本 / 年级筛选。</div>
+        <span class="meta">官方免费 · 国内直连</span>
+        <div class="arrow">进入电子课本 →</div>
       </a>
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E5%B0%8F%E5%AD%A6%EF%BC%88%E4%BA%94%E2%80%A2%E5%9B%9B%E5%AD%A6%E5%88%B6%EF%BC%89">
-        <div class="stage">小学（五·四学制）</div>
-        <div class="desc">五·四学制小学阶段教材目录</div>
-        <div class="arrow">进入目录 →</div>
+      <a class="card" href="https://basic.smartedu.cn/">
+        <div class="stage">国家平台首页 · 课程教学</div>
+        <div class="desc">同步课程视频、课件、配套数字资源，可配合课本预习与复习；手机也可在微信搜索“国家中小学智慧教育平台”。</div>
+        <span class="meta">官方免费 · 国内直连</span>
+        <div class="arrow">进入课程资源 →</div>
       </a>
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E5%88%9D%E4%B8%AD">
-        <div class="stage">初中</div>
-        <div class="desc">六三学制初中各学科教材目录</div>
-        <div class="arrow">进入目录 →</div>
-      </a>
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E5%88%9D%E4%B8%AD%EF%BC%88%E4%BA%94%E2%80%A2%E5%9B%9B%E5%AD%A6%E5%88%B6%EF%BC%89">
-        <div class="stage">初中（五·四学制）</div>
-        <div class="desc">五·四学制初中阶段教材目录</div>
-        <div class="arrow">进入目录 →</div>
-      </a>
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E9%AB%98%E4%B8%AD">
-        <div class="stage">高中</div>
-        <div class="desc">高中各学科教材目录</div>
-        <div class="arrow">进入目录 →</div>
-      </a>
-      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook/tree/master/%E5%A4%A7%E5%AD%A6">
-        <div class="stage">大学</div>
-        <div class="desc">高数、线性代数、概率论等大学公共课教材</div>
-        <div class="arrow">进入目录 →</div>
+      <a class="card" href="https://abooks.hep.com.cn/">
+        <div class="stage">高教社 · 新形态教材网（大学）</div>
+        <div class="desc">高等教育出版社旗下大学教材与配套数字资源，涵盖公共课与专业课；部分教材需登录后阅览。</div>
+        <span class="meta">大学教材 · 国内直连</span>
+        <div class="arrow">进入大学教材 →</div>
       </a>
     </div>
 
-    <h2>其他公开来源</h2>
-    <div class="links">
-      <a href="https://github.com/TapXWorld/ChinaTextbook">原开源仓库主页</a>
-      <a href="https://github.com/TapXWorld/ChinaTextbook/blob/master/README.md">仓库 README</a>
-      <a href="https://basic.smartedu.cn">国家中小学智慧教育平台</a>
+    <h2><span class="dot"></span>二、找习题（同步练习与试卷）</h2>
+    <div class="grid">
+      <a class="card" href="https://basic.smartedu.cn/">
+        <div class="stage">国家平台 · 基础性作业与习题库</div>
+        <div class="desc">教材同步基础题、分层习题、单元与期末试卷，部分资源支持智能组卷，按年级学科检索。</div>
+        <span class="meta">官方免费 · 国内直连</span>
+        <div class="arrow">进入题库练习 →</div>
+      </a>
+      <a class="card" href="https://www.zxxk.com/">
+        <div class="stage">学科网 · 同步练习与试卷</div>
+        <div class="desc">同步课时练、专项训练、期中期末真题等；进入后可找“免费专区”，普通用户有每日下载额度，部分资源需付费。</div>
+        <span class="meta warn">部分免费 · 注意额度与付费</span>
+        <div class="arrow">进入学科网 →</div>
+      </a>
     </div>
+
+    <h2><span class="dot"></span>三、补充来源（国内访问可能不稳定）</h2>
+    <div class="grid">
+      <a class="card" href="https://github.com/TapXWorld/ChinaTextbook">
+        <div class="stage">GitHub · ChinaTextbook 教材仓库</div>
+        <div class="desc">汇总小初高及大学 PDF 教材的开源仓库；GitHub 目录与文件在部分国内网络下可能加载缓慢或打不开，仅作补充参考。</div>
+        <span class="meta warn">境外仓库 · 访问可能受限</span>
+        <div class="arrow">查看原仓库 →</div>
+      </a>
+    </div>
+
+    <p class="note">提示：如果某个链接打不开，先切换 Wi-Fi 与手机流量，或用浏览器无痕窗口重试；官方平台建议优先使用“智慧中小学”App 或微信小程序。</p>
 
     <footer>
-      <p>本页面为静态导航站点，由 GitHub Pages 托管。如涉及版权问题，请联系仓库维护者移除对应导航链接。</p>
+      <p>本页面为静态导航站点，由 GitHub Pages 托管。如认为某一导航链接涉及版权问题，可联系仓库维护者移除对应链接。</p>
     </footer>
   </div>
 </body>
